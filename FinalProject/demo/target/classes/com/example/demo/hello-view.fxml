@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="heroListView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="924.0" prefWidth="695.0" xmlns="http://javafx.com/javafx/17.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.ProjetoFinalController">
+
+    <cursor>
+        <Cursor fx:constant="DEFAULT" />
+    </cursor>
+    <Pane layoutX="38.0" layoutY="41.0" prefHeight="269.0" prefWidth="260.0" style="-fx-background-color: GREY;">
+        <children>
+            <Label layoutX="11.0" layoutY="32.0" text="Nome:" />
+            <TextField fx:id="heroName" layoutX="83.0" layoutY="32.0" style="-fx-background-color: White;" />
+            <ChoiceBox fx:id="heroChoice" layoutX="84.0" layoutY="79.0" prefWidth="150.0" />
+            <Label layoutX="11.0" layoutY="121.0" text="Vida:" />
+            <TextField fx:id="heroHp" layoutX="83.0" layoutY="121.0" style="-fx-background-color: White;" />
+            <Label layoutX="11.0" layoutY="79.0" text="Raça:" />
+            <Label layoutX="11.0" layoutY="166.0" text="Armadura:" />
+            <TextField fx:id="heroArmor" layoutX="83.0" layoutY="166.0" style="-fx-background-color: White;" />
+            <Button layoutX="84.0" layoutY="220.0" mnemonicParsing="false" onAction="#onClickAddHero" text="Adicionar" />
+        </children>
+    </Pane>
+    <Pane layoutX="398.0" layoutY="41.0" prefHeight="269.0" prefWidth="260.0" style="-fx-background-color: GREY;">
+        <children>
+            <Label layoutX="11.0" layoutY="32.0" text="Nome:" />
+            <TextField fx:id="bestaName" layoutX="83.0" layoutY="32.0" style="-fx-background-color: White;" />
+            <ChoiceBox fx:id="bestaChoice" layoutX="84.0" layoutY="79.0" prefWidth="150.0" />
+            <Label layoutX="11.0" layoutY="121.0" text="Vida:" />
+            <TextField fx:id="bestaHp" layoutX="83.0" layoutY="121.0" style="-fx-background-color: White;" />
+            <Label layoutX="11.0" layoutY="79.0" text="Raça:" />
+            <Label layoutX="11.0" layoutY="166.0" text="Armadura:" />
+            <TextField fx:id="bestaArmor" layoutX="83.0" layoutY="166.0" style="-fx-background-color: White;" />
+            <Button layoutX="84.0" layoutY="220.0" mnemonicParsing="false" onAction="#onClickAddBesta" text="Adicionar" />
+        </children>
+    </Pane>
+    <TableView fx:id="heroView" layoutX="38.0" layoutY="330.0" prefHeight="200.0" prefWidth="260.0">
+        <columns>
+            <TableColumn fx:id="nomeColumn" prefWidth="65.0" text="Nome" />
+            <TableColumn fx:id="classe" prefWidth="65.0" text="Class" />
+            <TableColumn fx:id="hpArmor" prefWidth="65.0" text="HP" />
+            <TableColumn fx:id="heroArmorColumn" prefWidth="65.0" text="Armor" />
+        </columns>
+    </TableView>
+    <TableView fx:id="bestaView" layoutX="398.0" layoutY="330.0" prefHeight="200.0" prefWidth="260.0">
+        <columns>
+            <TableColumn fx:id="bestaNameColumn" prefWidth="65.0" text="Nome" />
+            <TableColumn fx:id="bestaClasseColumn" prefWidth="65.0" text="Class" />
+            <TableColumn fx:id="bestaHpColumn" prefWidth="65.0" text="HP" />
+            <TableColumn fx:id="bestaArmorColumn" prefWidth="65.0" text="Armor" />
+        </columns>
+    </TableView>
+    <Button layoutX="38.0" layoutY="539.0" minWidth="53.0" mnemonicParsing="false" onAction="#onClickMoveHeroUp" prefHeight="30.0" prefWidth="70.0" text="Subir" />
+    <Button layoutX="133.0" layoutY="539.0" minWidth="53.0" mnemonicParsing="false" onAction="#onClickMoveHeroDown" prefHeight="30.0" prefWidth="70.0" text="Baixar" />
+    <Button layoutX="228.0" layoutY="539.0" minWidth="53.0" mnemonicParsing="false" onAction="#removeHero" prefHeight="30.0" prefWidth="70.0" text="Eliminar" />
+    <Button layoutX="398.0" layoutY="539.0" minWidth="53.0" mnemonicParsing="false" onAction="#onClickMoveBestaUp" prefHeight="30.0" prefWidth="70.0" text="Subir" />
+    <Button layoutX="493.0" layoutY="539.0" minWidth="53.0" mnemonicParsing="false" onAction="#onClickMoveBestaDown" prefHeight="30.0" prefWidth="70.0" text="Baixar" />
+    <Button layoutX="588.0" layoutY="539.0" minWidth="53.0" mnemonicParsing="false" onAction="#removerBesta" prefHeight="30.0" prefWidth="70.0" text="Eliminar" />
+    <TextArea fx:id="combatText" layoutX="28.0" layoutY="631.0" prefHeight="279.0" prefWidth="635.0" />
+    <Button layoutX="298.0" layoutY="585.0" mnemonicParsing="false" onAction="#onClickStartBattle" prefHeight="39.0" prefWidth="100.0" text="FIGHT!!" />
+</Pane>
